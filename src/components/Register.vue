@@ -17,6 +17,7 @@
         <label> <input type="checkbox" value="vue js" v-model="framework">Vue js</label>
         <label> <input type="checkbox" value="Angular" v-model="framework">Angular</label>
     </div>
+    
     </div>
 </template>
 <script>
