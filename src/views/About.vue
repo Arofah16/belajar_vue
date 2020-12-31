@@ -16,6 +16,11 @@
     <ul>
       <li v-for="num in cariBilanganGenap(numbers)" :key="num">{{num}}</li>
     </ul> -->
+
+    <h3>membuat form submit menggunakan key modifier .enter</h3>
+    <p><input type="text" placeholder=" Nama Bahasa " v-on:keyup.enter="submit"></p>
+
+    
     <h2>membuat daftar pelajaran dengan merender menggunakan v-if {{lessons.length}}</h2>
     <template  v-if="lessons.length > 1">
       <ul>
@@ -46,6 +51,11 @@
         return data.filter(angka => {
           return angka % 2 == 0
         })
+      },
+      submit:function(event){
+        let text = event.target.value
+        this.lessons.unshift(text)
+        event.target.value=""
       }
     }
   }
