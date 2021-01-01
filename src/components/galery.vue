@@ -36,7 +36,7 @@
     <span>pilihanku adalah:{{selected}}</span>
     <br>
     <h2>contoh penggunaan vue instance
-
+{{tanggal}}
     </h2>
     <button v-on:click="count++">Anda mengklik saya {{ count }} kali.</button>
 </div>
@@ -51,6 +51,7 @@
             selected:'',
             count:'' 
             }
-        }
+        },
+        props:['tanggal']
     }
 </script>
