@@ -25,6 +25,7 @@
     <template  v-if="lessons.length > 1">
       <ul>
         <li v-for="(lesson,index) of lessons" :key="lesson">{{index+1}}--{{lesson}}</li>
+      <a href="" v-on:click.prevent="$emit('hapusKelas')">hapus</a>
       </ul>
     </template>
     <!-- <li v-else> data pelajaran tidak ada</li> -->
